@@ -9,3 +9,113 @@ body {
   height: 100%;
   background-color: #303133;
 }
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 800px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+/* Search Input Styles */
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+}
+
+input[type="text"]::placeholder {
+  color: #888;
+}
+
+/* Virtual Scroll Container */
+.viewport {
+  height: 400px;  // Adjust the height as needed
+width: 100%;
+  overflow: auto;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-top: 20px;
+  background-color: #fafafa;
+  padding: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  font-size: 16px;
+  color: #333;
+  background-color: #fff;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+}
+
+li:hover {
+  background-color: #e6f7ff;
+  cursor: pointer;
+}
+
+/* Loading Spinner */
+.loading {
+  color: #4a90e2;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+  animation: spin 1.5s infinite linear;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Error Message Styles */
+.error {
+  color: #e74c3c;
+  font-size: 16px;
+  margin-top: 20px;
+  font-weight: bold;
+}
